@@ -4,10 +4,18 @@ using Dumpify;
 IEnumerable<int> listaNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
+// ALL
+// Verifica se todos os números são maiores que 2
+listaNumeros.All(x => x > 2).Dump();
+
+
+// ANY
+// Verifica se existe algum número maior que 5
+//listaNumeros.Any(x => x > 15).Dump();
+
 // CHUNK
 // Divide a lista em partes de X elementos
-listaNumeros.Chunk(3).Dump();
-
+//listaNumeros.Chunk(3).Dump();
 
 
 // WHERE
