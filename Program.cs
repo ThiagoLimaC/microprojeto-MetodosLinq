@@ -3,6 +3,13 @@ using Dumpify;
 
 IEnumerable<int> listaNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+
+// CHUNK
+// Divide a lista em partes de X elementos
+listaNumeros.Chunk(3).Dump();
+
+
+
 // WHERE
 // listaNumeros.Where(num => num > 5).Dump();
 
@@ -19,5 +26,7 @@ IEnumerable<int> listaNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 //listaNumeros.TakeLast(5).Dump();
 
 // SkipWhile e TakeWhile
-listaNumeros.SkipWhile(x => x < 5).Dump();
-listaNumeros.TakeWhile(x => x < 2).Dump();
+// pula os números enquanto for menor que 5
+//listaNumeros.SkipWhile(x => x < 5).Dump();
+// pega os números enquanto for menor que 2
+//listaNumeros.TakeWhile(x => x < 2).Dump();
