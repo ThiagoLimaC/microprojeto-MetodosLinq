@@ -3,7 +3,34 @@ using Dumpify;
 
 IEnumerable<int> listaNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-listaNumeros.Count().Dump();
+IEnumerable<Pessoa> pessoas = [
+        new ("Fernanda", 15),
+        new ("Lucas", 18),
+        new ("Carlos", 18),
+        new ("Eduarda", 17),
+        new ("Mia", 12),
+    ];
+
+// AVERAGE
+//listaNumeros.Average().Dump();
+
+// SUM 
+//listaNumeros.Sum().Dump();
+
+record Pessoa(string nome, int idade);
+
+
+// MAXBY e MINBY
+// Retorna o maior e menor valor de acordo com a propriedade passada
+//pessoas.MaxBy(x => x.idade).Dump();
+//pessoas.MinBy(x => x.idade).Dump();
+
+// MAX e MIN
+//listaNumeros.Max().Dump();
+//listaNumeros.Min().Dump();
+
+// COUNT
+//listaNumeros.Count().Dump();
 
 // APPEND e PREPEND
 // Adiciona o número 15 ao final da lista
