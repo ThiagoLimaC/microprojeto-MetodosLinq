@@ -3,11 +3,21 @@ using Dumpify;
 
 IEnumerable<int> listaNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+listaNumeros.Count().Dump();
+
+// APPEND e PREPEND
+// Adiciona o número 15 ao final da lista
+//listaNumeros.Append(15).Dump();
+// Adiciona o número 20 ao início da lista
+//listaNumeros.Prepend(20).Dump();
+
+// CONTAINS
+// Verifica se a lista contém o número 15
+//listaNumeros.Contains(15).Dump();
 
 // ALL
 // Verifica se todos os números são maiores que 2
-listaNumeros.All(x => x > 2).Dump();
-
+//listaNumeros.All(x => x > 2).Dump();
 
 // ANY
 // Verifica se existe algum número maior que 5
