@@ -11,6 +11,12 @@ IEnumerable<Pessoa> pessoas = [
         new ("Mia", 12),
     ];
 
+
+// FIRST e DEFAULT
+//listaNumeros.First().Dump();
+// a lista pode estar vazia portanto ele retorna o valor default
+//listaNumeros.FirstOrDefault(-1).Dump();
+
 // AVERAGE
 //listaNumeros.Average().Dump();
 
