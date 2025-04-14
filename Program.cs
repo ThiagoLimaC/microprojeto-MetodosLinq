@@ -1,7 +1,11 @@
 ﻿
 using Dumpify;
 
-IEnumerable<int> listaNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+IEnumerable<int> listaNumeros = [1, 2, 3,  4, 5, 6, 7, 9, 10];
+IEnumerable<string> listaTexto = ["a", "b", "c", "d", "e", "f"];
+
+listaNumeros.Zip(listaTexto).Dump();
+
 
 IEnumerable<Pessoa> pessoas = [
         new ("Fernanda", 15),
@@ -11,6 +15,44 @@ IEnumerable<Pessoa> pessoas = [
         new ("Mia", 12),
     ];
 
+// DISTINCT
+// Retorna os elementos distintos da lista
+//listaNumeros.Distinct().Dump();
+// Retorna os elementos distintos da lista de acordo com a propriedade passada
+//pessoas.DistinctBy(x => x.idade).Dump();
+
+
+
+// range e repeat
+//IEnumerable<int> listaRange = Enumerable.Range(0, 100);
+//listaRange.ToList().Dump();
+//IEnumerable<int> listaRange = Enumerable.Repeat(1, 10);
+//listaRange.ToList().Dump();
+
+
+// TOLIST
+// retorna em formato de lista
+//listaNumeros.ToList();
+
+// ELEMENTAT e ELEMENTATORDEFAULT
+// retorna elemento na posição especificada
+//listaNumeros.ElementAt(0).Dump();
+// retorna elemento na posição especificada ou zero por default
+//listaNumeros.ElementAtOrDefault(12).Dump();
+
+// LAST e LASTORDEFAULT
+// retorna o último elemento
+//listaNumeros.Last().Dump();
+// retorna o último elemento e caso a lista seja vazia o default
+//listaNumeros.LastOrDefault().Dump();
+
+// SINGLE e SINGLEORDEFAULT
+// retorna um único elemento de uma lista de um elemento
+//listaNumeros.Single().Dump();
+// retorna um elemento default se tiver nenhum elemento na lista
+//listaNumeros.SingleOrDefault().Dump();
+
+record Pessoa(string nome, int idade);
 
 // FIRST e DEFAULT
 //listaNumeros.First().Dump();
@@ -22,9 +64,6 @@ IEnumerable<Pessoa> pessoas = [
 
 // SUM 
 //listaNumeros.Sum().Dump();
-
-record Pessoa(string nome, int idade);
-
 
 // MAXBY e MINBY
 // Retorna o maior e menor valor de acordo com a propriedade passada
