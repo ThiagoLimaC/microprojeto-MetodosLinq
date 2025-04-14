@@ -1,10 +1,24 @@
 ﻿
 using Dumpify;
 
-IEnumerable<int> listaNumeros = [1, 2, 3,  4, 5, 6, 7, 9, 10];
+IEnumerable<int> listaNumeros = [1, 2, 3, 4, 5, 6, 7];
+IEnumerable<int> listaNumeros2 = [8, 9, 10, 11, 12, 13, 14];
 IEnumerable<string> listaTexto = ["a", "b", "c", "d", "e", "f"];
 
-listaNumeros.Zip(listaTexto).Dump();
+
+// ORDER  e ORDERDESCENDING
+// Ordena a lista de forma crescente
+//listaNumeros.Order().Dump();
+// Ordena a lista de forma decrescente
+//listaNumeros.OrderDescending().Dump();
+
+
+// ZIP
+// transforma as duas listas em pares
+//listaNumeros.Zip(listaTexto).Dump();
+
+// CONCAT
+//listaNumeros.Concat(listaNumeros2).Dump();
 
 
 IEnumerable<Pessoa> pessoas = [
@@ -13,7 +27,20 @@ IEnumerable<Pessoa> pessoas = [
         new ("Carlos", 18),
         new ("Eduarda", 17),
         new ("Mia", 12),
+        new ("Caio", 11),
+        new ("Felipe", 11),
+        new ("Rogério", 11)
     ];
+
+// ORDERBY
+// Ordena a lista de pessoas de acordo com a idade
+//pessoas.OrderBy(x => x.idade).Dump();
+// Ordena a lista de pessoas de acordo com a idade e depois pelo nome
+//pessoas.OrderByDescending(x => x.idade).Dump();
+
+// GROUPBY
+// Agrupa as pessoas por idade  
+//pessoas.GroupBy(x => x.idade).Dump();
 
 // DISTINCT
 // Retorna os elementos distintos da lista
